@@ -1,0 +1,35 @@
+generated: '2026-07-20'
+method: probed
+source: dig + openssl s_client + curl HEAD (live probe)
+note: >-
+  Network Engines Inc. was acquired by UNICOM Global and rebranded UNICOM
+  Engineering; networkengines.com now redirects to www.unicomengineering.com.
+  These are the corporate marketing hosts — the company publishes no public API,
+  so this domain-security probe covers only the corporate web/mail domains.
+hosts:
+- host: www.unicomengineering.com
+  https: true
+  tls_version: TLSv1.3
+  hsts: true
+  hsts_max_age: 31536000
+- host: networkengines.com
+  https: true
+  redirects_to: https://www.unicomengineering.com/
+  tls_version: TLSv1.3
+  hsts: true
+  hsts_max_age: 31536000
+domains:
+- domain: unicomengineering.com
+  dnssec: false
+  caa: []
+  spf: true
+  spf_record: "v=spf1 mx include:spf.protection.outlook.com include:securityiqmail.net include:mktomail.com include:spf.emailsignatures365.com include:_spf-amer.onbmc.com ~all"
+  dmarc: true
+  dmarc_policy: none
+- domain: networkengines.com
+  dnssec: false
+  caa: []
+  spf: true
+  spf_record: "v=spf1 include:spf.protection.outlook.com -all"
+  dmarc: true
+  dmarc_policy: none

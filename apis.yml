@@ -1,8 +1,30 @@
 aid: network-engines
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source: []
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/network-engines.png
 name: Network Engines
-description: Network Engines is a company surfaced as a portfolio company of canaan-partners and added
-  to the API Evangelist network as a stub for enrichment. This profile is a lead awaiting the enrichment
-  pipeline.
+description: >-
+  Network Engines, Inc. was an early venture-backed (Canaan Partners) server and
+  storage appliance maker that built application platforms and OEM appliance
+  integration hardware for software vendors. The company was later acquired by
+  UNICOM Global and rebranded UNICOM Engineering — its original networkengines.com
+  domain now redirects to www.unicomengineering.com, where the business is
+  positioned around Dell-based appliances and OEM engineering / build-to-order
+  application platform integration. It is a hardware and manufacturing-services
+  business, not an API producer: an enrichment probe on 2026-07-20 found no public
+  developer program, no OpenAPI, no /api or /developers surface, and no
+  /.well-known discovery documents on either host. This profile is retained in the
+  API Evangelist network as a Canaan Partners portfolio lead; there is no API
+  surface to enrich.
 url: https://raw.githubusercontent.com/api-evangelist/network-engines/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -10,14 +32,31 @@ x-backed-by:
 - canaan-partners
 x-tier: stub
 x-tier-reason: portfolio-lead
+x-no-api-surface: true
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-20'
 tags:
 - Company
+- Hardware
+- Server Appliances
+- OEM
+- Systems Integration
+- Application Platforms
+- Enterprise Infrastructure
 apis: []
+common:
+- type: Website
+  url: https://www.unicomengineering.com/
+- type: DomainSecurity
+  url: security/network-engines-domain-security.yml
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+x-enrichment:
+  date: '2026-07-20'
+  status: minimal
+  artifacts_added: 1
+  pass: local-v1
